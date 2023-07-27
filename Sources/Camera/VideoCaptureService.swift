@@ -1,7 +1,7 @@
 import AVFoundation
 
 /// Delegate protocol used for `VideoCaptureService`
-public protocol VideoCaptureServiceDelegate: class {
+public protocol VideoCaptureServiceDelegate: AnyObject {
   /// Sent to the delegate when a sample buffer was received
   func videoCaptureService(_ service: VideoCaptureService,
                            didOutput sampleBuffer: CMSampleBuffer,

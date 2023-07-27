@@ -1,6 +1,7 @@
 import Vision
+import CoreImage
 
-public protocol ClassificationServiceProtocol: class {
+public protocol ClassificationServiceProtocol: AnyObject {
   init()
   func setup()
   func classify(image: CIImage)

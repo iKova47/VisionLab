@@ -6,7 +6,8 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Vadym Markov" => "markov.vadym@gmail.com" }
   s.social_media_url = 'https://twitter.com/vadymmarkov'
-  s.ios.deployment_target = "11.0"
+  s.ios.deployment_target = "15.0"
+  s.swift_version = '5.0'
   s.source       = {
     :git => "https://github.com/cocoa-ml/VisionLab.git",
     :tag => s.version.to_s

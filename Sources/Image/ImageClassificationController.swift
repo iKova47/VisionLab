@@ -41,7 +41,7 @@ PhotoSourceControllerDelegate, UINavigationControllerDelegate, UIImagePickerCont
   // MARK: - PhotoSourceControllerDelegate
 
   public func photoSourceController(_ controller: PhotoSourceController,
-                                    didSelectSourceType sourceType: UIImagePickerControllerSourceType) {
+                                    didSelectSourceType sourceType: UIImagePickerController.SourceType) {
     let imagePicker = UIImagePickerController()
     imagePicker.delegate = self
     imagePicker.allowsEditing = true
@@ -53,7 +53,7 @@ PhotoSourceControllerDelegate, UINavigationControllerDelegate, UIImagePickerCont
 
   public func imagePickerController(_ picker: UIImagePickerController,
                                     didFinishPickingMediaWithInfo info: [String : Any]) {
-    let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage
+      let editedImage = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage
     guard let image = editedImage, let ciImage = CIImage(image: image) else {
       print("Can't analyze selected photo")
       return
